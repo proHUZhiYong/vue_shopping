@@ -1,0 +1,8 @@
+
+github忽略文件及文件夹方法
+git rm -r --cached .  
+先把本地缓存删除（改变成未track状态），然后再提交
+
+git add .
+git commit -m ‘update .gitignore’
+git push ssh路径  master
