@@ -1,16 +1,33 @@
 //入口 文件
 
 import Vue from 'vue'
+
+//导入路由的包
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
+//导入vue-resource
+// import VueResource from 'vue-resource'
+// Vue.use(VueResource)
+
 //导入 mui 的样式
 import './lib/mui/css/mui.css'
+import './lib/mui/css/icons-extra.css'
 //按需导入 mint-ui 组件
-import { Header} from 'mint-ui'
+import { Header,Swipe, SwipeItem} from 'mint-ui'
 Vue.component(Header.name,Header)
+Vue.component(Swipe.name, Swipe);
+Vue.component(SwipeItem.name, SwipeItem);
+
+
+//导入 自己的 路由模块
+import router from './router.js'
 
 //导入 跟组件
 import app from './App.vue'
 
 var vm = new Vue({
     el:"#app",
-    render:c => c(app)
+    render:c => c(app),
+    router //在vm 实例上挂载路由对象
 })
