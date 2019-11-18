@@ -6,9 +6,17 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
+// 定义全局过滤器 过滤时间格式 需要用到 moment插件
+import moment from 'moment'
+Vue.filter('dataFormat',function(dataStr,pattern="YYYY-MM-DD HH:mm:ss"){
+    return moment(dataStr).format(pattern)
+})
+
 //导入vue-resource
-// import VueResource from 'vue-resource'
-// Vue.use(VueResource)
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
+//设置请求的根路径 http 地址头
+// Vue.http.options.root = '/root';
 
 //导入 mui 的样式
 import './lib/mui/css/mui.css'
