@@ -17,15 +17,18 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 //设置请求的根路径 http 地址头
 // Vue.http.options.root = '/root';
+//全局设置 post 时候的表单数据的组织格式
+Vue.http.options.emulateJSON = true;
 
 //导入 mui 的样式
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
 //按需导入 mint-ui 组件
-import { Header,Swipe, SwipeItem} from 'mint-ui'
+import { Header,Swipe,SwipeItem,Button} from 'mint-ui'
 Vue.component(Header.name,Header)
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(Button.name, Button);
 
 
 //导入 自己的 路由模块
