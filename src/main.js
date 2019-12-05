@@ -8,7 +8,7 @@ Vue.use(VueRouter)
 
 // 定义全局过滤器 过滤时间格式 需要用到 moment插件
 import moment from 'moment'
-Vue.filter('dataFormat',function(dataStr,pattern="YYYY-MM-DD HH:mm:ss"){
+Vue.filter('dateFormat',function(dataStr,pattern="YYYY-MM-DD HH:mm:ss"){
     return moment(dataStr).format(pattern)
 })
 
@@ -24,11 +24,27 @@ Vue.http.options.emulateJSON = true;
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
 //按需导入 mint-ui 组件
-import { Header,Swipe,SwipeItem,Button} from 'mint-ui'
-Vue.component(Header.name,Header)
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
-Vue.component(Button.name, Button);
+// import { Header,Swipe,SwipeItem,Button} from 'mint-ui'
+// Vue.component(Header.name,Header)
+// Vue.component(Swipe.name, Swipe);
+// Vue.component(SwipeItem.name, SwipeItem);
+// Vue.component(Button.name, Button);
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+
+Vue.use(MintUI);
+
+import VuePreview from 'vue-preview' //引用图片预览插件
+Vue.use(VuePreview, {
+    mainClass: 'pswp--minimal--dark',
+    barsSize: {top: 0, bottom: 0},
+    captionEl: false,
+    fullscreenEl: false,
+    shareEl: false,
+    bgOpacity: 1,
+    tapToClose: true,
+    tapToToggleControls: false
+})
 
 
 //导入 自己的 路由模块

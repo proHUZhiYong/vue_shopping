@@ -2,7 +2,6 @@
   <div class="app-container">
     <!-- 顶部header 区域 -->
     <mt-header fixed title="第一个vue 项目"></mt-header>
-
     <!-- 中间 路由 router-view 区域 -->
     <transition>
       <router-view></router-view>
@@ -19,7 +18,7 @@
       </router-link>
       <router-link class="mui-tab-item-lib" to="/shopcar">
         <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
-          <span class="mui-badge">9</span>
+          <span class="mui-badge" id="badge">0</span>
         </span>
         <span class="mui-tab-label">购物车</span>
       </router-link>
@@ -66,7 +65,7 @@
     text-overflow: ellipsis;
     color: #929292;
 }
-.mui-bar-tab .mui-tab-lib .mui-icon {
+.mui-bar-tab .mui-tab-item-lib .mui-icon {
     top: 3px;
     width: 24px;
     height: 24px;

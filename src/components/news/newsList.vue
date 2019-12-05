@@ -8,8 +8,8 @@
                         <h1>{{item.title}}</h1>
                         <p class='mui-ellipsis'>
                             <!-- 定义过滤器改变时间格式 -->
-                            <span>发表时间：{{item.time|dataFormat}}</span>
-                            <!-- <span>发表时间：{{item.time|dataFormat('YYYY-MM-DD')}}</span> -->
+                            <span>发表时间：{{item.time|dateFormat}}</span>
+                            <!-- <span>发表时间：{{item.time|dateFormat('YYYY-MM-DD')}}</span> -->
                             <span>点击0次</span>
                         </p>
                     </div>

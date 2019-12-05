@@ -1,9 +1,7 @@
 <template>
   <div>
-    <mt-swipe :auto="4000">
-      <!-- 在组件中使用 v-for 循环 要绑定key -->
-      <mt-swipe-item v-for="item in lunbotuList" :key="item.url">{{item.name}}</mt-swipe-item>
-    </mt-swipe>
+    <!-- 轮播图 -->
+    <swiper :lunbotuList="lunbotuList" :isfull="true"></swiper>
     <!-- 九宫格->六宫格 -->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
@@ -21,7 +19,7 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
-        <router-link to="">
+        <router-link to="home/goodsList">
           <span class="mui-icon mui-icon-chatbubble"></span>
           <div class="mui-media-body">商品购买</div>
         </router-link>
@@ -49,15 +47,19 @@
 </template>
 <script>
 import { Toast } from "mint-ui";
+import swiper from "../subcomponent/swiper.vue"
 export default {
   data() {
     return {
       lunbotuList: [
-        { url: "1", name: "第一张轮播" },
-        { url: "2", name: "第二张轮播" },
-        { url: "3", name: "第三张轮播" }
+        { src: "http://pic31.nipic.com/20130629/13140082_200149691195_2.jpg", name: "第一张轮播" },
+        { src: "http://b-ssl.duitang.com/uploads/blog/201401/09/20140109163745_PVkuh.jpeg", name: "第二张轮播" },
+        { src: "http://file02.16sucai.com/d/file/2014/0829/372edfeb74c3119b666237bd4af92be5.jpg", name: "第三张轮播" }
       ] //保存轮播图的数组
     };
+  },
+  components:{
+    swiper
   },
   created() {
     this.getLunbotu();
@@ -78,21 +80,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.mint-swipe {
-  height: 200px;
-}
-// sass 语法
-.mint-swipe-item {
-  &:nth-child(1) {
-    background-color: red;
-  }
-  &:nth-child(2) {
-    background-color: blue;
-  }
-  &:nth-child(3) {
-    background-color: salmon;
-  }
-}
 .mui-grid-view.mui-grid-9{
     background-color: #fff;
     border: 0;
