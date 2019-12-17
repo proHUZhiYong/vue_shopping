@@ -40,7 +40,7 @@ export default {
             // })
             const list_arr=[
                 {id:1,src_:'http://pic71.nipic.com/file/20150710/9448607_105753090000_2.jpg',title:"这是第一个商品"},
-                {id:2,src_:'http://www.leawo.cn/attachment/201408/22/1723875_1408671905O1v3.jpg',title:"这是第二个商品"},
+                {id:2,src_:'http://img2.imgtn.bdimg.com/it/u=4145052645,1255376937&fm=26&gp=0.jpg',title:"这是第二个商品"},
                 {id:3,src_:'http://i1.sinaimg.cn/ent/d/2008-06-04/U105P28T3D2048907F326DT20080604225106.jpg',title:"这是第三个商品"},
             ]
             this.goodslist=this.goodslist.concat(list_arr);

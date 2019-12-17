@@ -63,3 +63,7 @@ Uncaught TypeError: 'caller', 'callee', and 'arguments' properties may not be ac
 ## 商品购买页面 以及商品详情页面
 
 ## 加入购物车效果 实现
+
+## 购物车 页面实现，价格计算 数量计算效果
+
+## 项目初步完成

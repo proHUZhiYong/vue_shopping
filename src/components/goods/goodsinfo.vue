@@ -64,6 +64,7 @@ export default {
     created(){
         this.getLunbotu(),
         this.getgoodsinfo()
+        console.log(typeof(this.id),this.id)
     },
     methods:{
         getLunbotu(){
@@ -114,6 +115,16 @@ export default {
         addToShopCar(){
             //添加到购物车
             this.ballFlg = !this.ballFlg;
+            // {id:商品的id,count:商品的数量,price:商品的价格,selected:false }
+            //拼接处一个 要保存到 store 中 car 数组里的 商品信息
+            var goodsinfo_data={
+                id:this.id,
+                count:this.selectCount,
+                price:this.goodsinfo.sell_price,
+                selected:true
+            }
+            //调用 store 中的 mutations 来 将商品加入 购物车
+            this.$store.commit("addToCar",goodsinfo_data)
         },
         beforeEnter(el){
             el.style.transform = "translate(0,0)";
