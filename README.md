@@ -67,3 +67,5 @@ Uncaught TypeError: 'caller', 'callee', and 'arguments' properties may not be ac
 ## 购物车 页面实现，价格计算 数量计算效果
 
 ## 项目初步完成
+
+## 修改 package.json
