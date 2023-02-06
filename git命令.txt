@@ -1,8 +1,11 @@
 
-github忽略文件及文件夹方法
+github锟斤拷锟斤拷锟侥硷拷锟斤拷锟侥硷拷锟叫凤拷锟斤拷
 git rm -r --cached .  
-先把本地缓存删除（改变成未track状态），然后再提交
+锟饺把憋拷锟截伙拷锟斤拷删锟斤拷锟斤拷锟侥憋拷锟轿磘rack状态锟斤拷锟斤拷然锟斤拷锟斤拷锟结交
 
 git add .
-git commit -m ‘update .gitignore’
-git push ssh路径  master
+git commit -m 锟斤拷update .gitignore锟斤拷
+git push ssh路锟斤拷  master
+
+git checkout -b dev1
+git push --set-upstream origin dev1
